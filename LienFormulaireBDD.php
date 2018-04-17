@@ -24,19 +24,7 @@ if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['societe']) &
 		case 'F': $civilite=0; break;
 	}
 
-	switch ($_POST['bouton']){
-		case 'Reset':
-			$societe=null;
-			$civilite=null;
-			$nom=null;
-			$prenom=null;
-			$adr=null;
-			$cp=null;
-			$ville=null;
-			$mail=null;
-			break;
-		case 'Submit':
-
+	if(isset($_POST['enregistrer'])) {
 			$server='localhost';
 			$db='projettrello';
 			$login='root';
@@ -65,8 +53,12 @@ if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['societe']) &
 			'ville' => $ville,
 			'mail' => $mail));
 
-			break;
-		}
+			header("Location: MotDePasse.html");
+
+			
+	}
+}else{
+	header("Location: IhmSaisieErreur.html");
 }
 
 ?>

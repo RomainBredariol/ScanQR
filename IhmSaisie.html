@@ -1,3 +1,4 @@
+<!Doctype html>
 <html>
 	<html>
 	<head>
@@ -9,11 +10,10 @@
 	<div class="centre">
 		<div id="registration">
 		<h2> Creer un compte </h2>
-		<form action="newCompte.php" method="post">
+		<form action="LienFormulaireBDD.php" method="post">
 			<fieldset>
 		
 			<label for="societe">Societe :   </label> <input type="text" name="societe" value=""><br />
-			<label for="civilite">Civilite : </label>  <input type="text" name="civilite" value=""><br />
 			<label for="nom">Nom :           </label>  <input type="text" name="nom" value=""><br />
 			<label for="prenom">Prenom :     </label>  <input type="text" name="prenom" value=""><br />
 			<label for="adr">Adresse :       </label>  <input type="text" name="adr" value=""><br />
@@ -23,7 +23,7 @@
 
 			<div> <label for="M">Homme :           </label>  <input type="radio" name="civilite" value="M"><br />
 			<label for="F">Femme :           </label>  <input type="radio" name="civilite" value="F"> <br /> </div>
-			<button id="enregistrer" type="submit">Valider</button></fieldset>
+			<button id="enregistrer" name="enregistrer" type="submit">Valider</button></fieldset>
 		</form>
 		</div>
 	</div>

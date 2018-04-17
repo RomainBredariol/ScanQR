@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+	<html>
+	<head>
+	<title>EventCreationCompte</title>
+ 
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+	<div class="centre">
+		<div id="registration">
+		<h2> Creer un compte </h2>
+		<form action="LienFormulaireBDD.php" method="post">
+			<fieldset>
+		
+			<label for="societe">Societe :   </label> <input type="text" name="societe" value=""><br />
+			<label for="nom">Nom :           </label>  <input type="text" name="nom" value=""><br />
+			<label for="prenom">Prenom :     </label>  <input type="text" name="prenom" value=""><br />
+			<label for="adr">Adresse :       </label>  <input type="text" name="adr" value=""><br />
+			<label for="cp">Code Postal :    </label>  <input type="text" name="cp" value=""><br />
+			<label for="ville">Ville :       </label>  <input type="text" name="ville" value=""><br />
+			<label for="mail">Email :        </label>  <input type="email" name="mail" value=""><br />
+
+			<div> <label for="M">Homme :           </label>  <input type="radio" name="civilite" value="M"><br />
+			<label for="F">Femme :           </label>  <input type="radio" name="civilite" value="F"> <br /> </div>
+			<p style="color:red">Erreur : Vous n'avez pas rempli tous les champs</p> 
+			<button id="enregistrer" name="enregistrer" type="submit">Valider</button></fieldset>
+		</form>
+		</div>
+	</div>
+	</body>
+</html>
