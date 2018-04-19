@@ -26,10 +26,17 @@ if(isset($_POST['mdp']) && isset($_POST['repeatmdp'])){
 
 			}
 
+			$req = $linkpdo->prepare('UPDATE personnes set mdp = :newMdp;');
+
+			///Exécution de la requête
+			$req->execute(
+				array('newMdp' => $mdp));
+
+
 
 			
 		}else{
-			header("Location: MDPErreur.html")
+			header("Location: MDPErreur.html");
 		}
 
 			

@@ -19,6 +19,7 @@ if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['societe']) &
 	$ville=$_POST['ville'];
 	$mail=$_POST['mail'];
 
+
 	switch ($_POST['civilite']){
 		case 'M': $civilite=1; break;
 		case 'F': $civilite=0; break;
@@ -40,7 +41,7 @@ if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['societe']) &
 			}
 			
 			///Préparation de la requête
-			$req = $linkpdo->prepare('INSERT INTO personnes(Societe, civilite, nom, prenom, adresse, cp, ville, email) VALUES(:societe, :civilite, :nom, :prenom, :adr, :cp, :ville, :mail);');
+			$req = $linkpdo->prepare('INSERT INTO personnes(Societe, civilite, nom, prenom, adresse, cp, ville, email, mdp, admin) VALUES(:societe, :civilite, :nom, :prenom, :adr, :cp, :ville, :mail, :mdp, :admin);');
 
 			///Exécution de la requête
 			$req->execute(
@@ -51,7 +52,9 @@ if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['societe']) &
 			'adr' => $adr,
 			'cp' => $cp, 
 			'ville' => $ville,
-			'mail' => $mail));
+			'mail' => $mail,
+			'mdp' => '',
+			'admin' => 0));
 
 			header("Location: MotDePasse.html");
 
