@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Index</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="indexStyle.css">
 </head>
 <body>
-	<header>
-		<h1 id="titre">Bienvenue à toi pd</h1>
-	</header>
 
-	<main>
-		<div id="connection">
-			<form>
-				<fieldset>
-					<label class="lab" for="login">Login :</label><input type="text" name="login"><br>
-					<label for="mdp">Mot de passe : </label><input type="password" name="mdp"><br>
-					<input type="submit" name="con" value="Se connecter" id="submitB">
-					<input type="button" name="creer" value="Creer un compte"  onclick="redirection()">
-
-				</fieldset>
-			</form>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-sm-4 col-xs-4" ></div>
+			<div class="col-lg-4 col-sm-4 col-xs-4 "   >
+				<h1>Bienvenue</h1>
+			</div>
 		</div>
-		
-	</main>
+		<div class="row">
+			<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4" ></div>
+			<form action="connection.php" method="post" id="form">
+				<div class="form-group">
+					<label for="email"> Login (email) :</label>
+					<input type="email" name="mail" class="form-control">
+					
+				</div>
+				<div class="form-group">
+					<label for="pwd">Password :</label>
+					<input type="password" name="pwd" class="form-control">
+					
+				</div>
+				<button type="submit" class="btn btn-primary" > Connexion</button>
+				<button type="button" class="btn btn-secondary" onclick="mdr()"> Creer Compte</button>
+				
+			</form>
+			
+		</div>
+
+	</div>
+	
+
+
 
 </body>
 </html>
 
 <script type="text/javascript">
-	  function redirection(){
-        document.location.href="http://localhost/scanQR/IhmSaisie.html";
-      }
+	function mdr(){
+		 document.location.href="http://localhost/scan/ihmSaisie.php"
+	}
 </script>
+
